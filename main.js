@@ -44,11 +44,13 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(() => console.log('Audio is playing'))
       .catch((error) => console.error('Autoplay failed:', error));
   });
-    // Right-click event to pause audio
-    document.body.addEventListener('contextmenu', (event) => {
-      event.preventDefault(); // Prevent the default right-click menu
-      audioElement.pause();   // Pause the audio
-      console.log('Audio paused');
-    });
+  // Right-click event to pause audio
+  document.body.addEventListener('contextmenu', (event) => {
+    event.preventDefault(); // Prevent the default right-click menu
+    audioElement.pause();   // Pause the audio
+    console.log('Audio paused');
+  });
+
+  audioElement.play()
 
 });
